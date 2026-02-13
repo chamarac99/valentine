@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
+    <title>Will You Be My Valentine? 💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <div id="bearContainer"></div>
+    
+    <div class="container">
+        <!-- Main Card -->
+        <div class="card" id="mainCard">
+            <div class="hearts-animation">
+                <span class="heart">💕</span>
+                <span class="heart">💕</span>
+                <span class="heart">💕</span>
+                <span class="heart">🌹</span>
+                <span class="heart">💕</span>
+            </div>
+            
+            <div class="rose-left">🌹</div>
+            <div class="rose-right">🌹</div>
+            
+            <h1 class="title">A Special Question</h1>
+            
+            <p class="message" id="messageText">
+                Hey there! 💌
+            </p>
+            
+            <p class="question" id="questionText">
+                Will you be my Valentine? 💝
+            </p>
+            
+            <div class="buttons-container">
+                <button class="btn btn-yes" id="yesBtn">
+                    Yes! 💗
+                </button>
+                <button class="btn btn-no" id="noBtn">
+                    No 😢
+                </button>
+            </div>
+            
+            <div id="response" class="response"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

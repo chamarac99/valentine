@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
+  <title>Yes! 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root{--accent:#ff1744;--accent-dark:#c2185b;--bg1:#ffdfe6;--bg2:#ffc4d6}
+    html{min-height:100%}
+    body{
+      font-family: 'Lora', serif;
+      margin:0; padding:20px 0;
+      background: linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 100%);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    body::before{content:''; position:absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.15), transparent 40%), radial-gradient(circle at 80% 70%, rgba(194, 24, 91, 0.1), transparent 40%); pointer-events:none; z-index:-1}
+    .stage{position:relative; text-align:center; padding:38px; border-radius:22px; background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.92)); box-shadow: 0 30px 90px rgba(194, 24, 91, 0.22), 0 0 80px rgba(255, 23, 68, 0.1); max-width:820px; width:92%; margin:0 auto; overflow:hidden; animation: pageEntry 0.8s ease-out}
+    @keyframes pageEntry{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
+    h1{color:var(--accent-dark); font-size:2.6rem; margin:0 0 6px; font-family:'Playfair Display',serif; font-weight:700}
+    p.lead{color:rgba(80,10,50,0.85); margin:0 0 18px; font-size:1.05rem}
+
+    .hugging{position:relative; height:260px; display:flex; align-items:center; justify-content:center}
+    .bear{font-size:6rem; display:inline-block}
+    .bear.left{margin-right:18px; animation: moveLeft 1.6s ease-in-out infinite}
+    .bear.right{margin-left:18px; animation: moveRight 1.6s ease-in-out infinite}
+    @keyframes moveLeft{0%{transform:translateX(0)}45%{transform:translateX(48px) rotate(4deg)}55%{transform:translateX(36px) rotate(2deg)}100%{transform:translateX(0)}}
+    @keyframes moveRight{0%{transform:translateX(0)}45%{transform:translateX(-48px) rotate(-4deg)}55%{transform:translateX(-36px) rotate(-2deg)}100%{transform:translateX(0)}}
+
+    .heart-pulse{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:3.4rem; opacity:0; animation: heartPop 1.6s ease-in-out infinite}
+    @keyframes heartPop{0%{transform:scale(.6);opacity:0}40%{transform:scale(1.2);opacity:1}70%{transform:scale(1);opacity:.95}100%{transform:scale(.6);opacity:0}}
+
+    .message-block{margin-top:12px}
+    .big-message{font-size:1.08rem; color:#4a153a; margin:8px 24px; line-height:1.7; font-family:'Lora',serif}
+    .from-line{color:var(--accent); font-weight:700; margin-top:8px; font-family:'Playfair Display',serif}
+
+    .gif-wrap{margin-top:14px}
+    #hugGif{max-width:420px;border-radius:16px;box-shadow:0 18px 50px rgba(194,24,91,0.18); display:block; margin:0 auto}
+
+    .controls{display:flex; gap:10px; justify-content:center; margin-top:18px; flex-wrap:wrap}
+    .controls .btn{padding:11px 18px; border-radius:999px; border:none; cursor:pointer; font-weight:700; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.4px}
+    .btn.btn-yes{background:linear-gradient(135deg,var(--accent) 0%,#ff5252 100%); color:#fff; box-shadow:0 12px 30px rgba(255,23,68,0.28)}
+    .btn.btn-no{background:#fff; color:var(--accent-dark); border:2px solid rgba(194,24,91,0.12)}
+    .btn{box-shadow:0 10px 20px rgba(194,24,91,0.1); transition:all 0.3s ease}
+    .btn:hover{transform:translateY(-2px); box-shadow:0 14px 28px rgba(194,24,91,0.15)}
+
+    .small-note{margin-top:18px; color:#5b1240; font-weight:600; font-size:0.95rem}
+
+    .bg-heart{position:fixed; pointer-events:none; font-size:20px; opacity:.1}
+
+    .confetti{position:fixed; pointer-events:none}
+    @media (max-width:520px){.big-message{font-size:1rem; margin:6px 10px}#hugGif{max-width:300px}.controls{gap:8px}.btn{padding:9px 14px; font-size:0.8rem}.hugging{height:200px}.bear{font-size:4rem}}
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <h1>She said YES! 💖</h1>
+    <p class="lead">To the most wonderful her — this is our moment.</p>
+
+    <div class="hugging">
+      <div class="bear left">🧸</div>
+      <div class="heart-pulse">💞</div>
+      <div class="bear right">🐻</div>
+    </div>
+
+    <div class="message-block">
+      <p class="big-message">My dearest, your "yes" lights up my world. I promise to cherish your smile, listen to your stories, and hold your hand through everything. Here's to our first of many beautiful moments together.</p>
+      <p class="from-line">— With all my love</p>
+    </div>
+
+    <div class="gif-wrap">
+      <!-- Cartoon hugging/kissing GIF (replace if desired) -->
+      <img id="hugGif" src="https://media.tenor.com/ejMtbLv7H-gAAAAj/panda-bear-brown-bear.gif" alt="panda hugging gif" style="max-width:360px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.12)">
+    </div>
+
+  
+
+    <div class="small-note">Capture this moment and keep the smiles going 💕</div>
+  </div>
+
+  <script>
+    // small confetti burst on page load
+    function smallConfetti() {
+      const emojis = ['💕','✨','🎉','🌹'];
+      for (let i=0;i<18;i++){
+        const d = document.createElement('div');
+        d.className = 'confetti'; d.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+        d.style.left = (20 + Math.random()*60) + 'vw';
+        d.style.top = (10 + Math.random()*10) + 'vh';
+        d.style.fontSize = (14 + Math.random()*20) + 'px';
+        document.body.appendChild(d);
+        const dur = 2000 + Math.random()*1200;
+        d.animate([{transform:'translateY(0) rotate(0deg)', opacity:1},{transform:`translateY(${120+Math.random()*200}px) rotate(${360*Math.random()}deg)`, opacity:0}],{duration:dur,easing:'ease-out'});
+        setTimeout(()=>d.remove(),dur+100);
+      }
+    }
+    window.addEventListener('load', () => { smallConfetti(); spawnBgHearts(); });
+
+   
+
+    // spawn subtle background hearts that float upwards
+    function spawnBgHearts(){
+      const count = 10;
+      for(let i=0;i<count;i++){
+        const el = document.createElement('div'); el.className='bg-heart'; el.textContent = Math.random()>0.5? '💖':'💕';
+        const size = 12 + Math.random()*28; el.style.fontSize = size+'px';
+        el.style.left = (Math.random()*100)+'vw'; el.style.top = (60 + Math.random()*30)+'vh'; el.style.opacity = 0.06 + Math.random()*0.15;
+        document.body.appendChild(el);
+        const dur = 9000 + Math.random()*10000;
+        el.animate([{transform:'translateY(0)', opacity:el.style.opacity},{transform:`translateY(-${120+Math.random()*240}px)`, opacity:0}],{duration:dur, iterations:Infinity, easing:'linear'});
+      }
+    }
+  </script>
+</body>
+</html>
